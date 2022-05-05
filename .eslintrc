@@ -1,35 +1,19 @@
 {
-  "parser": "@typescript-eslint/parser",
   "extends": [
-    "standard",
-    "standard-react",
-    "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "airbnb-typescript"
   ],
-  "env": {
-    "node": true,
-    "jest": true
-  },
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "legacyDecorators": true,
-      "jsx": true
-    }
-  },
-  "settings": {
-    "react": {
-      "version": "16"
-    }
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "space-before-function-paren": 0,
-    "react/prop-types": 0,
-    "react/jsx-handler-names": 0,
-    "react/jsx-fragments": 0,
-    "react/no-unused-prop-types": 0,
-    "import/export": 0
-  }
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off",
+    "react/prop-types": "off",
+    "max-len": ["error", 120],
+    "eol-last": "error"
+  },
+  "env": {
+    "jest": true
+  },
+  "ignorePatterns": ["setupTests.ts", "react-app-env.d.ts"]
 }
