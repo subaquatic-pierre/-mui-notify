@@ -1,6 +1,6 @@
 {
   "name": "mui-notify",
-  "version": "1.0.0",
+  "version": "0.0.1@alpha",
   "description": "mui-notify",
   "author": "subaquatic-pierre",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
