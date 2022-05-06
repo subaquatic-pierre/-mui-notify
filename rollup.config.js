@@ -3,6 +3,7 @@ import css from 'rollup-plugin-import-css';
 import { terser } from 'rollup-plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import image from '@rollup/plugin-image';
 
 import pkg from './package.json';
 
@@ -16,7 +17,11 @@ export default {
       sourcemap: true,
       strict: false,
     },
+    {
+      file: pkg.module,
+      format: 'esm',
+    },
   ],
-  plugins: [nodeResolve(), commonjs(), typescript(), terser(), css()],
+  plugins: [image(), nodeResolve(), commonjs(), typescript(), terser(), css()],
   external: ['react', 'react-dom', 'fs'],
 };
