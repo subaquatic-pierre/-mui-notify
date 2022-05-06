@@ -2,12 +2,13 @@
 
 > mui-notify
 
-[![NPM](https://img.shields.io/npm/v/mui-notify.svg)](https://www.npmjs.com/package/mui-notify) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-mui-notify.svg)](https://www.npmjs.com/package/react-mui-notify)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb_typescript-brightgreen.svg)](https://airbnb.io/javascript/react/)
 
 ## Install
 
 ```bash
-npm install --save mui-notify
+npm install --save react-mui-notify
 ```
 
 ## Usage
