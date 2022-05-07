@@ -1,20 +1,24 @@
-import 'styles/App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import {  ThemeProvider } from '@mui/material/styles';
+import { NotificationProvider } from 'react-mui-notify';
 
-import { ExampleComponent } from 'mui-notify';
+import theme from 'theme'
+
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Main from 'components/Main';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <ExampleComponent text="Cool chanbge" />
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <NotificationProvider>
+      <CssBaseline />
+        <Header />
+        <Main />
+        <Footer />
+      </NotificationProvider>
+    </ThemeProvider>
   );
 }
 
