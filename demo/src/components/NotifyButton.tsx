@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 interface Props {
   title: string;
   color: NotifyButtonColor;
+  settings: NotificationSettings;
 }
 
 const NotifyButton = ({ title, color }: Props) => {
