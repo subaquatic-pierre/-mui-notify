@@ -9,11 +9,10 @@ import Container from '@mui/material/Container';
 const Footer = () => {
   return (
     <AppBar component="footer" sx={{ marginTop: 'auto' }} position="relative">
-      <Container>
+      <Container sx={{ display: 'flex', justifyContent: 'center' }}>
         <Toolbar disableGutters>
-          <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+          <Typography textAlign="center" variant="caption" color="inherit">
+            &copy; React Mui Notify Demo
           </Typography>
         </Toolbar>
       </Container>

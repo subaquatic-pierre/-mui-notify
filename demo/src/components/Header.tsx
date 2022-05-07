@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AppBar from '@mui/material/AppBar';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
+import AdbIcon from '@mui/icons-material/Adb';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -11,9 +11,9 @@ const Header = () => {
     <AppBar component="header" position="relative">
       <Container>
         <Toolbar disableGutters>
-          <CameraIcon sx={{ mr: 2 }} />
+          <AdbIcon sx={{ mr: 2 }} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            React Mui Notify Demo
           </Typography>
         </Toolbar>
       </Container>

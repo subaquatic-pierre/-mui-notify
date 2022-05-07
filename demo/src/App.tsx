@@ -7,19 +7,18 @@ import theme from 'theme';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Main from 'components/Main';
+import Layout from 'components/Layout';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <NotificationProvider>
         <CssBaseline />
-        <div
-          style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}
-        >
+        <Layout>
           <Header />
           <Main />
           <Footer />
-        </div>
+        </Layout>
       </NotificationProvider>
     </ThemeProvider>
   );
