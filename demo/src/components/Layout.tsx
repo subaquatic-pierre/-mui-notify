@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface Props {
-  children: React.ReactElement;
+  children: any;
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: Props) => {
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
       {children}

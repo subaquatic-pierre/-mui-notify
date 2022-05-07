@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '@mui/material/Button';
+import { useNotify } from 'react-mui-notify';
 
 interface Props {
   title: string;
@@ -9,8 +10,14 @@ interface Props {
 }
 
 const NotifyButton = ({ title, color }: Props) => {
+  const { setSuccess } = useNotify();
+
+  const handleClick = () => {
+    setSuccess('Awesome message');
+  };
+
   return (
-    <Button variant="contained" color={color}>
+    <Button onClick={handleClick} variant="contained" color={color}>
       {title}
     </Button>
   );

@@ -6,8 +6,9 @@ export const initialState: NotificationState = {
   color: 'success',
 };
 
-export const NotificationContext = React.createContext<
-  [NotificationState, NotificationMethods | null]
->([initialState, {} as NotificationMethods]);
+export const NotificationState =
+  React.createContext<NotificationState>(initialState);
 
-export default NotificationContext;
+export const NotificationMethods = React.createContext<NotificationMethods>(
+  {} as NotificationMethods,
+);

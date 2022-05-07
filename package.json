@@ -1,6 +1,6 @@
 {
   "name": "react-mui-notify",
-  "version": "0.0.2-alpha",
+  "version": "0.0.3-alpha",
   "description": "Notification library for a React application",
   "author": "Pierre du Toit",
   "license": "MIT",
@@ -40,6 +40,7 @@
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.4"
@@ -64,9 +65,6 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.3.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
     "rollup": "^2.72.0",
     "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-terser": "^7.0.2",

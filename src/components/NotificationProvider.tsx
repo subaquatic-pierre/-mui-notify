@@ -2,7 +2,8 @@ import React from 'react';
 
 import { AlertColor } from '@mui/material';
 
-import { initialState, NotificationContext } from 'context';
+import { initialState, NotificationState, NotificationMethods } from 'context';
+import AlertMessage from 'components/AlertMessage';
 
 interface Props {
   children: React.ReactElement;
@@ -65,11 +66,12 @@ const NotificationProvider: React.FC<Props> = ({
   };
 
   return (
-    <NotificationContext.Provider
-      value={[notificationState, notificationMethods]}
-    >
-      {children}
-    </NotificationContext.Provider>
+    <NotificationState.Provider value={notificationState}>
+      <NotificationMethods.Provider value={notificationMethods}>
+        <AlertMessage />
+        {children}
+      </NotificationMethods.Provider>
+    </NotificationState.Provider>
   );
 };
 
