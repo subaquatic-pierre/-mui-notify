@@ -17,10 +17,6 @@ const Main = () => {
   const [settings, setSettings] =
     React.useState<NotificationSettings>(defaultSettings);
 
-  React.useEffect(() => {
-    console.log(settings);
-  }, [settings]);
-
   return (
     <Container sx={{ my: 5 }} component="main">
       <Grid container display="flex" justifyContent="center">
