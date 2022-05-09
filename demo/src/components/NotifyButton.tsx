@@ -10,10 +10,10 @@ interface Props {
 }
 
 const NotifyButton = ({ title, color }: Props) => {
-  const { setSuccess } = useNotify();
+  const { setNotification } = useNotify();
 
   const handleClick = () => {
-    setSuccess('Awesome message');
+    setNotification('Awesome message', 'info');
   };
 
   return (

@@ -1,13 +1,15 @@
+interface NotificationConfig {}
+
 interface NotificationState {
-  isOpen: boolean;
   message: string;
-  color: AlertColor;
+  type: AlertColor;
+  isOpen?: boolean;
 }
 
+type SetNotification = ({ message, type, isOpen }: NotificationState) => void;
+type ClearNotification = () => void;
+
 interface NotificationMethods {
-  setError: (message: string) => void;
-  setSuccess: (message: string) => void;
-  setInfo: (message: string) => void;
-  setWarning: (message: string) => void;
-  clearNotification: () => void;
+  setNotification: SetNotification;
+  clearNotification: ClearNotification;
 }

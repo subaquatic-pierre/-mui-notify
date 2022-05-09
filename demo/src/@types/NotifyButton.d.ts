@@ -1,5 +1,5 @@
 type NotifyButtonColor =
-| 'inherit'
+  | 'inherit'
   | 'primary'
   | 'secondary'
   | 'success'
@@ -8,6 +8,6 @@ type NotifyButtonColor =
   | 'warning';
 
 interface NotifyButton {
-    title: string;
-    color: NotifyButtonColor;
-  }
+  title: string;
+  color: NotifyButtonColor;
+}

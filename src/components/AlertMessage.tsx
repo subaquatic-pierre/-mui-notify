@@ -30,7 +30,7 @@ const AlertMessage: React.FC = () => {
       >
         <Alert
           onClose={handleClose}
-          severity={notificationState.color}
+          severity={notificationState.type}
           sx={{ minWidth: '600px' }}
           variant="filled"
         >

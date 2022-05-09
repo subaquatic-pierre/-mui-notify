@@ -1,9 +1,11 @@
 import React from 'react';
 
+export const initialNotificationConfig: NotificationConfig = {};
+
 export const initialState: NotificationState = {
-  isOpen: false,
   message: '',
-  color: 'success',
+  type: 'info',
+  isOpen: false,
 };
 
 export const NotificationState =
