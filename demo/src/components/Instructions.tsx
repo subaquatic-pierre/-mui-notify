@@ -20,8 +20,12 @@ const Instructions = () => {
       </Box>
       <Box>
         <Typography>
-          Set notification message, the default value for the message is: This
-          is a notification
+          Set notification message, the default value for the message is
+        </Typography>
+      </Box>
+      <Box>
+        <Typography>
+          Set the vertical or horizontal alignment of the notification
         </Typography>
       </Box>
     </Stack>
