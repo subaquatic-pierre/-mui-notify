@@ -7,25 +7,39 @@ import Instructions from 'components/Instructions';
 import Settings from 'components/Settings';
 import Grid from '@mui/material/Grid';
 
-const defaultSettings: NotificationSettings = {
+const defaultConfig: NotificationConfig = {
   duration: 5000,
-  dismissible: false,
+};
+
+const defaultState: NotificationState = {
   message: 'This is a notification',
+  type: 'info',
 };
 
 const Main = () => {
-  const [settings, setSettings] =
-    React.useState<NotificationSettings>(defaultSettings);
+  const [notificationState, setNotificationState] =
+    React.useState<NotificationState>(defaultState);
+
+  const [notificationConfig, setNotificationConfig] =
+    React.useState<NotificationConfig>(defaultConfig);
 
   return (
     <Container sx={{ my: 5 }} component="main">
       <Grid container display="flex" justifyContent="center">
         <Grid item xs={6}>
           <Instructions />
-          <Settings settings={settings} setSettings={setSettings} />
+          <Settings
+            notificationState={notificationState}
+            setNotificationState={setNotificationState}
+            notificationConfig={notificationConfig}
+            setNotificationConfig={setNotificationConfig}
+          />
         </Grid>
       </Grid>
-      <ButtonGrid settings={settings} />
+      <ButtonGrid
+        notificationConfig={notificationConfig}
+        notificationState={notificationState}
+      />
     </Container>
   );
 };

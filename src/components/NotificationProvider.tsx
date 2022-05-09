@@ -31,7 +31,7 @@ const NotificationProvider: React.FC<Props> = ({
   }) => {
     if (config !== undefined) {
       // Update config here
-      setNotificationConfig({});
+      // setNotificationConfig({});
       console.log(config);
     }
 

@@ -3,11 +3,12 @@ import React from 'react';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 
-import { useNotificationState, useNotify } from 'hooks';
+import { useNotificationState, useNotify, useNotificationConfig } from 'hooks';
 
 const AlertMessage: React.FC = () => {
   const { clearNotification } = useNotify();
   const notificationState = useNotificationState();
+  const notificationConfig = useNotificationConfig();
 
   const handleClose = (
     event?: React.SyntheticEvent | Event,
@@ -23,18 +24,16 @@ const AlertMessage: React.FC = () => {
     <>
       <Snackbar
         open={notificationState.isOpen}
-        autoHideDuration={10000}
+        autoHideDuration={notificationConfig.duration}
         onClose={handleClose}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-        key={'top center'}
+        anchorOrigin={notificationConfig.anchorOrigin}
       >
         <Alert
           onClose={handleClose}
           severity={notificationState.type}
-          sx={{ minWidth: '600px' }}
           variant="filled"
         >
-          {notificationState.message && notificationState.message}
+          {notificationState.message}
         </Alert>
       </Snackbar>
     </>

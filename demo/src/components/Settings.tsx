@@ -8,16 +8,26 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
 interface Props {
-  settings: NotificationSettings;
-  setSettings: React.Dispatch<React.SetStateAction<NotificationSettings>>;
+  notificationState: NotificationState;
+  setNotificationState: React.Dispatch<React.SetStateAction<NotificationState>>;
+
+  notificationConfig: NotificationConfig;
+  setNotificationConfig: React.Dispatch<
+    React.SetStateAction<NotificationConfig>
+  >;
 }
 
-const Settings = ({ settings, setSettings }: Props) => {
+const Settings = ({
+  notificationState,
+  setNotificationState,
+  notificationConfig,
+  setNotificationConfig,
+}: Props) => {
   const handleMessageChange = (
     event: React.ChangeEvent<HTMLInputElement>,
   ): void => {
-    setSettings((oldSettings: NotificationSettings) => ({
-      ...oldSettings,
+    setNotificationState((oldState: NotificationState) => ({
+      ...oldState,
       message: event.target.value,
     }));
   };
@@ -25,19 +35,9 @@ const Settings = ({ settings, setSettings }: Props) => {
   const handleDurationChange = (
     event: React.ChangeEvent<HTMLInputElement>,
   ): void => {
-    setSettings((oldSettings: NotificationSettings) => ({
-      ...oldSettings,
+    setNotificationConfig((oldConfig: NotificationConfig) => ({
+      ...oldConfig,
       duration: Number(event.target.value),
-    }));
-  };
-
-  const handleCheckboxChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    checked: boolean,
-  ): void => {
-    setSettings((oldSettings: NotificationSettings) => ({
-      ...oldSettings,
-      dismissible: checked,
     }));
   };
 
@@ -45,24 +45,13 @@ const Settings = ({ settings, setSettings }: Props) => {
     <Paper sx={{ p: 2, my: 2 }} variant="outlined">
       <Stack spacing={2}>
         <Box>
-          <FormControlLabel
-            control={
-              <Checkbox
-                value={settings.dismissible}
-                onChange={handleCheckboxChange}
-              />
-            }
-            label="Dismissible"
-          />
-        </Box>
-        <Box>
           <TextField
             fullWidth
             id="duration"
             label="Duration in ms"
             variant="outlined"
             onChange={handleDurationChange}
-            value={settings.duration}
+            value={notificationConfig.duration}
           />
         </Box>
         <Box>
@@ -72,7 +61,7 @@ const Settings = ({ settings, setSettings }: Props) => {
             label="Message"
             variant="outlined"
             onChange={handleMessageChange}
-            value={settings.message}
+            value={notificationState.message}
           />
         </Box>
       </Stack>

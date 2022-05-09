@@ -1,6 +1,12 @@
 import React from 'react';
 
-export const initialConfig: NotificationConfig = {};
+export const initialConfig: NotificationConfig = {
+  duration: 5000,
+  anchorOrigin: {
+    vertical: 'bottom',
+    horizontal: 'left',
+  },
+};
 
 export const initialState: NotificationState = {
   message: '',

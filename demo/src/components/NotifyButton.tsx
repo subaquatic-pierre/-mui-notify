@@ -5,19 +5,20 @@ import { useNotify } from 'react-mui-notify';
 
 interface Props {
   title: string;
-  color: NotifyButtonColor;
-  settings: NotificationSettings;
+  type: NotifyButtonColor;
+  config: NotificationConfig;
+  state: NotificationState;
 }
 
-const NotifyButton = ({ title, color }: Props) => {
+const NotifyButton = ({ title, type, state }: Props) => {
   const { setNotification } = useNotify();
 
   const handleClick = () => {
-    setNotification('Awesome message', 'info');
+    setNotification(state.message, type);
   };
 
   return (
-    <Button onClick={handleClick} variant="contained" color={color}>
+    <Button onClick={handleClick} variant="contained" color={type}>
       {title}
     </Button>
   );

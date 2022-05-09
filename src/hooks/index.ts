@@ -1,12 +1,18 @@
 import React from 'react';
-import { NotificationState, NotificationMethods } from 'context';
+import {
+  NotificationState,
+  NotificationMethods,
+  NotificationConfig,
+} from 'context';
 
-const useNotificationState = () => {
+export const useNotificationState = () => {
   return React.useContext(NotificationState);
 };
 
-const useNotify = () => {
-  return React.useContext(NotificationMethods);
+export const useNotificationConfig = () => {
+  return React.useContext(NotificationConfig);
 };
 
-export { useNotificationState, useNotify };
+export const useNotify = () => {
+  return React.useContext(NotificationMethods);
+};

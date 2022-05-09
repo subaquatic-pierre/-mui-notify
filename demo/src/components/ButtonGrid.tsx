@@ -5,17 +5,18 @@ import Grid from '@mui/material/Grid';
 import NotifyButton from 'components/NotifyButton';
 
 const notifyButtons: NotifyButton[] = [
-  { title: 'Info', color: 'info' },
-  { title: 'Success', color: 'success' },
-  { title: 'Error', color: 'error' },
-  { title: 'Warning', color: 'warning' },
+  { title: 'Info', type: 'info' },
+  { title: 'Success', type: 'success' },
+  { title: 'Error', type: 'error' },
+  { title: 'Warning', type: 'warning' },
 ];
 
 interface Props {
-  settings: NotificationSettings;
+  notificationConfig: NotificationConfig;
+  notificationState: NotificationState;
 }
 
-const ButtonGrid = ({ settings }: Props) => {
+const ButtonGrid = ({ notificationConfig, notificationState }: Props) => {
   return (
     <Grid
       sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}
@@ -26,8 +27,9 @@ const ButtonGrid = ({ settings }: Props) => {
         return (
           <Grid sx={{ display: 'flex', justifyContent: 'center' }} item key={i}>
             <NotifyButton
-              settings={settings}
-              color={button.color}
+              config={notificationConfig}
+              state={notificationState}
+              type={button.type}
               title={button.title}
             ></NotifyButton>
           </Grid>
