@@ -9,6 +9,10 @@ import Grid from '@mui/material/Grid';
 
 const defaultConfig: NotificationConfig = {
   duration: 5000,
+  anchorOrigin: {
+    vertical: 'bottom',
+    horizontal: 'left',
+  },
 };
 
 const defaultState: NotificationState = {

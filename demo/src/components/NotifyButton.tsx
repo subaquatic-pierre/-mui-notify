@@ -10,11 +10,15 @@ interface Props {
   state: NotificationState;
 }
 
-const NotifyButton = ({ title, type, state }: Props) => {
+const NotifyButton = ({ title, type, state, config }: Props) => {
   const { setNotification } = useNotify();
 
   const handleClick = () => {
-    setNotification(state.message, type);
+    setNotification({
+      message: state.message,
+      type,
+      config,
+    });
   };
 
   return (
