@@ -19,8 +19,8 @@ jobs:
         run: npm run build
         working-directory: demo
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages 
-          folder: demo/build 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: demo/build
