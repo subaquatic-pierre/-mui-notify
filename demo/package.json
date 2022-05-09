@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react-mui-notify": "0.0.3-alpha"
+    "react-mui-notify": "0.0.4-alpha"
   },
   "scripts": {
     "start": "react-scripts start",
