@@ -1,6 +1,6 @@
 {
   "name": "react-mui-notify",
-  "version": "0.0.4-alpha",
+  "version": "0.0.6-alpha",
   "description": "Notification library for a React application",
   "author": "Pierre du Toit",
   "license": "MIT",
