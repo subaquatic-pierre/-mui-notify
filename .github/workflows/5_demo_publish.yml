@@ -1,0 +1,26 @@
+name: DemoDeploy
+
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  demo-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Demo Install
+        run: npm install
+        working-directory: demo
+
+      - name: Demo Build
+        run: npm run build
+        working-directory: demo
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages 
+          folder: demo/build 
