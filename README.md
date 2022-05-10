@@ -7,7 +7,9 @@
 [![Codecov](https://codecov.io/gh/subaquatic-pierre/react-mui-notify/branch/main/graph/badge.svg?token=dpSUNajYjd)](https://codecov.io/gh/subaquatic-pierre/react-mui-notify)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb_typescript-brightgreen.svg)](https://airbnb.io/javascript/react/)
 
-Simple notification package using React and Material UI. An example can be found within with `demo` directory of this repo.
+Simple notification package using React and Material UI. Demo use of the package can be found at the following repo:
+
+Example: <https://github.com/subaquatic-pierre/react-mui-notify-demo>
 
 ## Install
 
