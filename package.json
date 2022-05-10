@@ -1,6 +1,6 @@
 {
   "name": "react-mui-notify",
-  "version": "0.0.1-alpha",
+  "version": "0.0.6-alpha",
   "description": "Notification library for a React application",
   "author": "Pierre du Toit",
   "license": "MIT",
@@ -11,17 +11,18 @@
   "scripts": {
     "test": "react-scripts test --watchAll=false --coverage",
     "test-watch": "react-scripts test",
-    "lint": "eslint src/ demo/src/",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"dist/**/*.js\"",
+    "lint": "eslint src/ demo/",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"demo/**/*.ts\" \"demo/**/*.tsx\"",
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!**/node_modules/*",
-      "!**/@types/*",
-      "!**/styles/*"
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns" :[
+      "src/@types",
+      "src/styles"
     ],
     "coverageThreshold": {
       "global": {
@@ -32,12 +33,17 @@
       }
     },
     "coverageReporters": [
-      "html"
+      "html",
+      "json"
     ]
   },
   "peerDependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.4"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
@@ -59,9 +65,6 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.3.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
     "rollup": "^2.72.0",
     "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-terser": "^7.0.2",
@@ -71,10 +74,5 @@
   },
   "files": [
     "dist/*"
-  ],
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.6.4"
-  }
+  ]
 }
