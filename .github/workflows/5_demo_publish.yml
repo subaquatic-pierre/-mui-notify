@@ -20,8 +20,8 @@ jobs:
         working-directory: demo
 
       # Deploy Demo
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./demo/build
+          branch: gh-pages # The branch the action should deploy to.
+          folder: demo/build # The folder the action should deploy.
