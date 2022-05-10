@@ -1,5 +1,5 @@
 interface NotificationSettings {
-    duration: number;
-    message:string;
-    dismissible: boolean
+  duration: number;
+  message: string;
+  dismissible: boolean;
 }
